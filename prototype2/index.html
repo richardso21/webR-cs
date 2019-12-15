@@ -7,31 +7,50 @@
     <link rel="stylesheet" href="scss/styles.css">
     <link rel="icon" href="media/logo.png">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="app.js"></script>
     <title>prototype 2</title>
 </head>
 <body>
         <div class="navbar">
-            <ul class="nav-items" class="AltColors">
+            <ul id="nav-items">
                 <img src="media/logo.png" alt="logo" id="logo">
-                <li><a href="http://google.com">hello</a></li>
-                <li><a href="http://google.com">hello</a></li>
-                <li><a href="http://google.com">hello</a></li>
-                <li><a href="http://bing.com" id="help">Help</a></li>       
+                <li><a href="http://google.com" class="a">hello</a></li>
+                <li><a href="http://google.com" class="a">hello</a></li>
+                <li><a href="http://google.com" class="a">hello</a></li>
+                <li><a href="http://google.com" class="a">Help</a></li>       
             </ul>
         </div>
         
         <div class="content">
 
-            <div class="intro-content">
-                <h1>Welcome</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <button>Onwards!</button>
+            <div class="intro">
+                <div class="intro-content">
+                    <h1>Welcome</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <button>Onwards!</button>
+                </div>
             </div>
 
             <div class="category1">
-                <!-- <p>hello</p> -->
+                <div class="category1-items" id="items_1_1">
+                    <h1>Flex 1</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque cumque nobis magni provident perspiciatis facilis exercitationem velit fugit, illum, nisi ipsam? Consequuntur doloremque aspernatur impedit deleniti quae, est voluptatibus tenetur?</p>
+                </div>
+                <div class="bg" id="bg_1"></div>
+                
+                <img src="media/logo.png" alt="logo" class="category1-items" id="items_1_2">
+                
+                <div class="category1-items" id="items_1_3">
+                    <h1>Flex 2</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, obcaecati. Vel eos alias quasi dignissimos quisquam, magni magnam unde quos ab modi pariatur ullam debitis nostrum doloribus, incidunt doloremque autem.</p>
+                </div>
+                <div class="bg" id="bg_2"></div>
+                
             </div>
             
+            <div class="category2">
+                
+            </div>
         </div>
 </body>
 </html>

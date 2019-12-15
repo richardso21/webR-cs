@@ -1,11 +1,17 @@
-.intro-content{
+.intro{
+    z-index: 1;
     background: url('../media/intro_background.png');
+    background-attachment: fixed;
     background-size: cover;
     height: 100vh;
-    // position: absolute;
-    // bottom: 20%;
-    // left: 10%;
     color: white;
+}
+
+.intro-content{
+    z-index: 2;
+    position: fixed;
+    bottom: 30%;
+    left: 10%;
 }
 
 .intro-content h1{

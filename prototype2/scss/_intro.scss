@@ -24,3 +24,28 @@
     // margin: 1rem;
     font-style: italic;
 }
+
+.button{
+    display: inline-block;
+    position: relative;
+}
+
+#intro-button{
+    padding: 0 3rem;
+    border: .25rem solid;
+    border-image-source: linear-gradient(to top right, #6e7c5e, #4b7f85);
+    border-image-slice: 10;
+    background-color: #222831;
+    color: white;
+    text-decoration: none;
+    font-size: 36px;
+    font-style: italic;
+    text-align: center;
+    transition: .3s ease;
+}
+
+
+#intro-button:hover{
+    background: linear-gradient(to top right, #4b7f85, #6e7c5e);
+    color: black;
+}

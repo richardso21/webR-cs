@@ -46,6 +46,10 @@
 }
 
 #bg_2{
+    background: linear-gradient(to right, #ff2242,#e79736,#3755f8,#33abfa,#00af2e);
+}
+
+#bg_3{
     background: linear-gradient(-45deg, #3755f8 15%, #33abfa 100%);
 }
 
@@ -58,7 +62,11 @@
     opacity: 1;
 }
 
-#items_1_3:hover~#bg_2{
+#items_1_2:hover~#bg_2{
+    opacity: 1;
+}
+
+#items_1_3:hover~#bg_3{
     opacity: 1;
 }
     

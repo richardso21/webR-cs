@@ -32,7 +32,7 @@
 #intro-button {
   padding: 0 3rem;
   border: .25rem solid;
-  border-image-source: linear-gradient(to top right, #6e7c5e, #4b7f85);
+  border-image-source: linear-gradient(to bottom left, #6e7c5e, #4b7f85);
   border-image-slice: 10;
   background-color: #222831;
   color: white;
@@ -155,6 +155,11 @@
 }
 
 #bg_2 {
+  background: -webkit-gradient(linear, left top, right top, from(#ff2242), color-stop(#e79736), color-stop(#3755f8), color-stop(#33abfa), to(#00af2e));
+  background: linear-gradient(to right, #ff2242, #e79736, #3755f8, #33abfa, #00af2e);
+}
+
+#bg_3 {
   background: linear-gradient(-45deg, #3755f8 15%, #33abfa 100%);
 }
 
@@ -169,7 +174,11 @@
   opacity: 1;
 }
 
-#items_1_3:hover ~ #bg_2 {
+#items_1_2:hover ~ #bg_2 {
+  opacity: 1;
+}
+
+#items_1_3:hover ~ #bg_3 {
   opacity: 1;
 }
 

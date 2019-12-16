@@ -1,10 +1,37 @@
 .intro {
   z-index: 1;
-  background: url("../media/intro_background.png");
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
   color: white;
+  background: linear-gradient(315deg, #0663f3, #ea1515);
+  background-size: 400% 400%;
+  -webkit-animation: gradientbg 8s ease infinite;
+  animation: gradientbg 8s ease infinite;
+}
+
+@-webkit-keyframes gradientbg {
+  0% {
+    background-position: 2% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 2% 0%;
+  }
+}
+
+@keyframes gradientbg {
+  0% {
+    background-position: 2% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 2% 0%;
+  }
 }
 
 .intro-content {
@@ -32,8 +59,8 @@
 #intro-button {
   padding: 0 3rem;
   border: .25rem solid;
-  border-image-source: linear-gradient(to bottom left, #6e7c5e, #4b7f85);
-  border-image-slice: 10;
+  border-image-source: linear-gradient(to bottom right, #ea1515, #0663f3);
+  border-image-slice: 1;
   background-color: #222831;
   color: white;
   text-decoration: none;
@@ -45,9 +72,9 @@
 }
 
 #intro-button:hover {
-  background: -webkit-gradient(linear, left bottom, right top, from(#4b7f85), to(#6e7c5e));
-  background: linear-gradient(to top right, #4b7f85, #6e7c5e);
-  color: black;
+  background: -webkit-gradient(linear, left top, right bottom, from(#ea1515), to(#0663f3));
+  background: linear-gradient(to bottom right, #ea1515, #0663f3);
+  color: whitesmoke;
 }
 
 .navbar {
@@ -193,5 +220,33 @@ body {
   margin: 0;
   border: 0;
   font-family: 'Source Sans Pro',sans-serif;
+  -webkit-animation: fadeIn ease 2s;
+          animation: fadeIn ease 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="scss/styles.css">
-    <link rel="icon" href="media/logo.png">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="scss/styles.css" />
+    <link rel="icon" href="media/logo.png" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
     <script src="app.js"></script>
+    <script src="cursor.js"></script>
     <title>prototype 2</title>
 </head>
+
 <body>
+    <div id="cursor"></div>
+
         <div class="navbar">
             <div id="nav-items">
-                <img src="media/logo.png" alt="logo" id="logo">
+                <img src="media/logo.png" alt="logo" id="logo" />
                 <a href="#intro" class="a" id="a_1"><span class="top_button">foo</span></a>
                 <a href="#category1" class="a" id="a_2"><span class="top_button">bar</span></a>
                 <a href="#category2" class="a" id="a_3"><span class="top_button">hello</span></a>
-                <a href="http://google.com" class="a" id="a_help"><span class="top_button">Help</span></a>       
+                <a href="http://google.com" class="a" id="a_help"><span class="top_button">Help</span></a>
             </div>
         </div>
-        
-        <div class="content">
 
+        <div class="content">
             <div class="intro" id="intro">
                 <div class="intro-content">
                     <h1>Welcome</h1>
@@ -36,24 +40,46 @@
             <div class="category1" id="category1">
                 <div class="category1-items" id="items_1_1">
                     <h1>Flex 1</h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque cumque nobis magni provident perspiciatis facilis exercitationem velit fugit, illum, nisi ipsam? Consequuntur doloremque aspernatur impedit deleniti quae, est voluptatibus tenetur?</p>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
+                        cumque nobis magni provident perspiciatis facilis exercitationem
+                        velit fugit, illum, nisi ipsam? Consequuntur doloremque aspernatur
+                        impedit deleniti quae, est voluptatibus tenetur?
+                    </p>
                 </div>
                 <div class="bg" id="bg_1"></div>
-                
-                <img src="media/logo.png" alt="logo" class="category1-items" id="items_1_2">
+
+                <img src="media/logo.png" alt="logo" class="category1-items" id="items_1_2" />
                 <div class="bg" id="bg_2"></div>
-                
+
                 <div class="category1-items" id="items_1_3">
                     <h1>Flex 2</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, obcaecati. Vel eos alias quasi dignissimos quisquam, magni magnam unde quos ab modi pariatur ullam debitis nostrum doloribus, incidunt doloremque autem.</p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+                        obcaecati. Vel eos alias quasi dignissimos quisquam, magni magnam
+                        unde quos ab modi pariatur ullam debitis nostrum doloribus, incidunt
+                        doloremque autem.
+                    </p>
                 </div>
                 <div class="bg" id="bg_3"></div>
             </div>
-            
-            <div class="category2" id="category2">
-                
-            </div>
 
+            <div class="category2" id="category2">
+
+                <div class="layer1">
+                    <div class="overlap-parent">
+                        <div class="overlap-pics">
+                            <img src="http://picsum.photos/id/237/300" alt="" class="overlap-pics-indv" id="oppics_1" />
+                            <img src="http://picsum.photos/id/238/300" alt="" class="overlap-pics-indv" id="oppics_2" />
+                            <img src="http://picsum.photos/id/239/300" alt="" class="overlap-pics-indv" id="oppics_3" />
+                        </div>
+                    </div>
+
+                    <div class="pop-text"></div>
+                </div>
+
+            </div>
         </div>
 </body>
+
 </html>

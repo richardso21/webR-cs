@@ -30,6 +30,11 @@
     animation: fill 0.5s ease forwards 2s;
 }
 
+#welcome-intro path{
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
 #welcome-intro path:nth-child(1){
     stroke-dasharray: 790px;
     stroke-dashoffset: 790px;

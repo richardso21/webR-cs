@@ -1,15 +1,12 @@
 .intro {
   z-index: 1;
   background-attachment: fixed;
-  background-size: cover;
+//   background-size: cover;
   height: 100vh;
   color: white;
-  // background: url('../media/intro_background.png');
   background: linear-gradient(315deg, #0663f3, #ea1515);
   background-size: 400% 400%;
 
-  -webkit-animation: gradientbg 8s ease infinite;
-  -moz-animation: gradientbg 8s ease infinite;
   animation: gradientbg 8s ease infinite;
 }
 
@@ -25,23 +22,80 @@
   }
 }
 
-.intro-content {
-  z-index: 2;
-  position: fixed;
-  bottom: 30%;
-  left: 10%;
+#welcome-intro{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: fill 0.5s ease forwards 2s;
 }
 
-.intro-content h1 {
-  margin: 1rem 0;
-  font-size: 72px;
+#welcome-intro path:nth-child(1){
+    stroke-dasharray: 790px;
+    stroke-dashoffset: 790px;
+    animation: line-anim 2s ease forwards;
+}
+#welcome-intro path:nth-child(2){
+    stroke-dasharray: 462px;
+    stroke-dashoffset: 462px;
+    animation: line-anim 2s ease forwards;
+}
+#welcome-intro path:nth-child(3){
+    stroke-dasharray: 308px;
+    stroke-dashoffset: 308px;
+    animation: line-anim 2s ease forwards;
+}
+#welcome-intro path:nth-child(4){
+    stroke-dasharray: 492px;
+    stroke-dashoffset: 492px;
+    animation: line-anim 2s ease forwards;
+}
+#welcome-intro path:nth-child(5){
+    stroke-dasharray: 530px;
+    stroke-dashoffset: 530px;
+    animation: line-anim 2s ease forwards;
+}
+#welcome-intro path:nth-child(6){
+    stroke-dasharray: 737px;
+    stroke-dashoffset: 737px;
+    animation: line-anim 2s ease forwards;
+}
+#welcome-intro path:nth-child(7){
+    stroke-dasharray: 462px;
+    stroke-dashoffset: 462px;
+    animation: line-anim 2s ease forwards;
 }
 
-.intro-content p {
-  font-size: 28px;
-  // margin: 1rem;
-  font-style: italic;
+@keyframes line-anim {
+    to{
+        stroke-dashoffset: 0px;
+    }
 }
+@keyframes fill {
+    from{
+        fill: transparent;
+    }
+    to{
+        fill: white;
+    }
+}
+// .intro-content {
+//   z-index: 2;
+//   position: fixed;
+//   bottom: 30%;
+//   left: 10%;
+// }
+
+// .intro-content h1 {
+//   margin: 1rem 0;
+//   font-size: 72px;
+// }
+
+// .intro-content p {
+//   font-size: 28px;
+//   // margin: 1rem;
+//   font-style: italic;
+// }
 
 .button {
   display: inline-block;

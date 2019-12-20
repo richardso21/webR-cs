@@ -1,4 +1,5 @@
-window.onscroll = function() {
+//dynamic nav bar
+window.onscroll = function () {
   scrollFunction();
 };
 
@@ -23,5 +24,28 @@ function scrollFunction() {
       aElement[x].classList.remove("transform-a");
     }
   }
-}
+};
 
+//cursor follower
+window.onload = function () {
+  cursorfunction();
+  welcomefunction();
+};
+
+function cursorfunction() {
+  let cursor = document.querySelector("#cursor");
+
+  document.addEventListener('mousemove', e => {
+    cursor.setAttribute("style", "top: " + (e.clientY - 10) + "px; left: " + (e.clientX - 10) + "px;")
+  })
+};
+
+//welcome-intro
+function welcomefunction(){
+  const welcome = document.querySelectorAll('#welcome-intro path');
+  // console.log(welcome);
+  for(let i = 0; i<welcome.length; i++){
+    console.log(`Letter ${i} is ${welcome[i].getTotalLength()}`);
+  }
+
+}

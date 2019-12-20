@@ -81,13 +81,12 @@ body {
 .intro {
   z-index: 1;
   background-attachment: fixed;
-  background-size: cover;
   height: 100vh;
   color: white;
   background: linear-gradient(315deg, #0663f3, #ea1515);
   background-size: 400% 400%;
   -webkit-animation: gradientbg 8s ease infinite;
-  animation: gradientbg 8s ease infinite;
+          animation: gradientbg 8s ease infinite;
 }
 
 @-webkit-keyframes gradientbg {
@@ -114,21 +113,93 @@ body {
   }
 }
 
-.intro-content {
-  z-index: 2;
-  position: fixed;
-  bottom: 30%;
-  left: 10%;
+#welcome-intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: fill 0.5s ease forwards 2s;
+          animation: fill 0.5s ease forwards 2s;
 }
 
-.intro-content h1 {
-  margin: 1rem 0;
-  font-size: 72px;
+#welcome-intro path:nth-child(1) {
+  stroke-dasharray: 790px;
+  stroke-dashoffset: 790px;
+  -webkit-animation: line-anim 2s ease forwards;
+          animation: line-anim 2s ease forwards;
 }
 
-.intro-content p {
-  font-size: 28px;
-  font-style: italic;
+#welcome-intro path:nth-child(2) {
+  stroke-dasharray: 462px;
+  stroke-dashoffset: 462px;
+  -webkit-animation: line-anim 2s ease forwards;
+          animation: line-anim 2s ease forwards;
+}
+
+#welcome-intro path:nth-child(3) {
+  stroke-dasharray: 308px;
+  stroke-dashoffset: 308px;
+  -webkit-animation: line-anim 2s ease forwards;
+          animation: line-anim 2s ease forwards;
+}
+
+#welcome-intro path:nth-child(4) {
+  stroke-dasharray: 492px;
+  stroke-dashoffset: 492px;
+  -webkit-animation: line-anim 2s ease forwards;
+          animation: line-anim 2s ease forwards;
+}
+
+#welcome-intro path:nth-child(5) {
+  stroke-dasharray: 530px;
+  stroke-dashoffset: 530px;
+  -webkit-animation: line-anim 2s ease forwards;
+          animation: line-anim 2s ease forwards;
+}
+
+#welcome-intro path:nth-child(6) {
+  stroke-dasharray: 737px;
+  stroke-dashoffset: 737px;
+  -webkit-animation: line-anim 2s ease forwards;
+          animation: line-anim 2s ease forwards;
+}
+
+#welcome-intro path:nth-child(7) {
+  stroke-dasharray: 462px;
+  stroke-dashoffset: 462px;
+  -webkit-animation: line-anim 2s ease forwards;
+          animation: line-anim 2s ease forwards;
+}
+
+@-webkit-keyframes line-anim {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@-webkit-keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
 }
 
 .button {
@@ -305,8 +376,7 @@ body {
 }
 
 #bg_2 {
-  background: -webkit-gradient(linear, left top, right top, from(#ff2242), color-stop(#e79736), color-stop(#3755f8), color-stop(#33abfa), to(#00af2e));
-  background: linear-gradient(to right, #ff2242, #e79736, #3755f8, #33abfa, #00af2e);
+  background: linear-gradient(45deg, #ff2242, #e79736, #3755f8, #33abfa, #00af2e);
 }
 
 #bg_3 {

@@ -1,5 +1,4 @@
 body {
-  cursor: none;
   overflow-x: hidden;
 }
 
@@ -12,7 +11,7 @@ body {
   height: 20px;
   border: 1px solid white;
   border-radius: 50%;
-  position: absolute;
+  position: fixed;
   z-index: 1000;
   pointer-events: none;
   -webkit-transition: 50ms ease-out;
@@ -23,23 +22,23 @@ body {
 
 @-webkit-keyframes cursorAnim {
   from {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
   }
 }
 
 @keyframes cursorAnim {
   from {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
   }
 }
 
@@ -63,8 +62,8 @@ body {
             transform: scale(1.2);
   }
   to {
-    -webkit-transform: scale(0.4);
-            transform: scale(0.4);
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
   }
 }
 
@@ -74,8 +73,8 @@ body {
             transform: scale(1.2);
   }
   to {
-    -webkit-transform: scale(0.4);
-            transform: scale(0.4);
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
   }
 }
 

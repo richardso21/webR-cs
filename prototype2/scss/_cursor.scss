@@ -1,5 +1,5 @@
 body{
-    cursor: none;
+    // cursor: none;
     overflow-x: hidden;
     // pointer-events: none;    
 }
@@ -13,7 +13,7 @@ body{
     height: 20px;
     border: 1px solid white;
     border-radius: 50%;
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     pointer-events: none;
     transition: 50ms ease-out;
@@ -22,10 +22,10 @@ body{
 
 @keyframes cursorAnim{
     from{
-        transform: scale(1.5);
+        transform: scale(1.2);
     }
     to{
-        transform: scale(1);
+        transform: scale(.9);
     }
 }
 
@@ -47,6 +47,6 @@ body{
         transform: scale(1.2);
     }
     to{
-        transform: scale(.4);
+        transform: scale(.6);
     }
 }

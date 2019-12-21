@@ -1,119 +1,59 @@
-body {
-  overflow-x: hidden;
-}
-
-* {
-  cursor: none;
-}
-
-#cursor {
-  width: 20px;
-  height: 20px;
-  border: 1px solid white;
-  border-radius: 50%;
-  position: fixed;
-  z-index: 1000;
-  pointer-events: none;
-  -webkit-transition: 50ms ease-out;
-  transition: 50ms ease-out;
-  -webkit-animation: cursorAnim .5s infinite alternate;
-          animation: cursorAnim .5s infinite alternate;
-}
-
-@-webkit-keyframes cursorAnim {
-  from {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  to {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-}
-
-@keyframes cursorAnim {
-  from {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  to {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-}
-
-#cursor::after {
-  content: "";
-  width: 20px;
-  height: 20px;
+.welcome-content {
   position: absolute;
-  border: 8px solid gray;
-  border-radius: 50%;
-  opacity: .5;
-  top: -8px;
-  left: -8px;
-  -webkit-animation: cursorAnim2 .5s infinite alternate;
-          animation: cursorAnim2 .5s infinite alternate;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 500;
+  height: 100%;
+  width: 100%;
+  background-color: #222831;
+  -webkit-animation: fade-into 1s ease forwards 2.5s;
+          animation: fade-into 1s ease forwards 2.5s;
 }
 
-@-webkit-keyframes cursorAnim2 {
+@-webkit-keyframes fade-into {
   from {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    background-color: #222831;
   }
   to {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
+    background-color: transparent;
   }
 }
 
-@keyframes cursorAnim2 {
+@keyframes fade-into {
   from {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    background-color: #222831;
   }
   to {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
+    background-color: transparent;
   }
 }
 
-.intro {
-  z-index: 1;
-  background-attachment: fixed;
-  height: 100vh;
-  color: white;
-  background: linear-gradient(315deg, #0663f3, #ea1515);
-  background-size: 400% 400%;
-  -webkit-animation: gradientbg 8s ease infinite;
-          animation: gradientbg 8s ease infinite;
+body {
+  -webkit-animation: stop-scroll 2.5s step-end forwards;
+          animation: stop-scroll 2.5s step-end forwards;
 }
 
-@-webkit-keyframes gradientbg {
-  0% {
-    background-position: 2% 0%;
+@-webkit-keyframes stop-scroll {
+  from {
+    overflow: hidden;
   }
-  50% {
-    background-position: 99% 100%;
-  }
-  100% {
-    background-position: 2% 0%;
+  to {
+    overflow: visible;
   }
 }
 
-@keyframes gradientbg {
-  0% {
-    background-position: 2% 0%;
+@keyframes stop-scroll {
+  from {
+    overflow: hidden;
   }
-  50% {
-    background-position: 99% 100%;
-  }
-  100% {
-    background-position: 2% 0%;
+  to {
+    overflow: visible;
   }
 }
 
 #welcome-intro {
+  visibility: visible;
+  z-index: 1000;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -207,9 +147,164 @@ body {
   }
 }
 
+body {
+  overflow-x: hidden;
+}
+
+* {
+  cursor: none;
+}
+
+#cursor {
+  top: -10rem;
+  left: -10rem;
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 1000;
+  pointer-events: none;
+  -webkit-animation: cursorAnim .5s infinite alternate;
+          animation: cursorAnim .5s infinite alternate;
+}
+
+@-webkit-keyframes cursorAnim {
+  from {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
+@keyframes cursorAnim {
+  from {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
+#cursor::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 8px solid gray;
+  border-radius: 50%;
+  opacity: .5;
+  top: -8px;
+  left: -8px;
+  -webkit-animation: cursorAnim2 .5s infinite alternate;
+          animation: cursorAnim2 .5s infinite alternate;
+}
+
+@-webkit-keyframes cursorAnim2 {
+  from {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+}
+
+@keyframes cursorAnim2 {
+  from {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+}
+
+@-webkit-keyframes cursorAnim3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes cursorAnim3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.expand {
+  -webkit-animation: cursorAnim3 .5s forwards;
+          animation: cursorAnim3 .5s forwards;
+  border: 1px solid red;
+}
+
+.intro {
+  z-index: 1;
+  background-attachment: fixed;
+  height: 100vh;
+  color: white;
+  background: linear-gradient(315deg, #0663f3, #ea1515);
+  background-size: 400% 400%;
+  -webkit-animation: gradientbg 8s ease infinite;
+          animation: gradientbg 8s ease infinite;
+}
+
+@-webkit-keyframes gradientbg {
+  0% {
+    background-position: 2% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 2% 0%;
+  }
+}
+
+@keyframes gradientbg {
+  0% {
+    background-position: 2% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 2% 0%;
+  }
+}
+
 .button {
   display: inline-block;
-  position: relative;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
 }
 
 #intro-button {
@@ -490,34 +585,14 @@ body {
           flex: 1;
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   margin: 0;
   border: 0;
   font-family: "Source Sans Pro", sans-serif;
-  -webkit-animation: fadeIn ease 2s;
-          animation: fadeIn ease 2s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 html {

@@ -1,5 +1,6 @@
 @import "variables";
 
+@import "welcome";
 @import "cursor";
 @import "intro";
 @import "nav";
@@ -7,24 +8,28 @@
 @import "category2";
 @import "category3";
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   margin: 0;
   border: 0;
   font-family: "Source Sans Pro", sans-serif;
 
-  animation: fadeIn ease 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  // animation: fadeIn ease 2s;
+  // animation-iteration-count: 1;
+  // animation-fill-mode: forwards;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+// @keyframes fadeIn {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
 
 html {
   scroll-behavior: smooth;

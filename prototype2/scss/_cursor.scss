@@ -9,6 +9,8 @@ body{
 }
 
 #cursor{
+    top: -10rem;
+    left: -10rem;
     width: 20px;
     height: 20px;
     border: 1px solid white;
@@ -16,7 +18,9 @@ body{
     position: fixed;
     z-index: 1000;
     pointer-events: none;
-    transition: 50ms ease-out;
+    // transition: 50ms ease-out;
+    // transition-duration: 200ms;
+    // transition-timing-function: ease-out;
     animation: cursorAnim .5s infinite alternate;
 }
 
@@ -49,4 +53,23 @@ body{
     to{
         transform: scale(.6);
     }
+}
+
+@keyframes cursorAnim3{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(3);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    // position: fixed;
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid red;
 }

@@ -5,6 +5,7 @@
     z-index: 500;
     height: 100%;
     width: 100%;
+    transform: scale(1.5);
     background-color: $darker;
     animation: fade-into 1s ease forwards 2.5s;
 }

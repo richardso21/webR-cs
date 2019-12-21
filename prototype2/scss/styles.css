@@ -5,6 +5,8 @@
   z-index: 500;
   height: 100%;
   width: 100%;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
   background-color: #222831;
   -webkit-animation: fade-into 1s ease forwards 2.5s;
           animation: fade-into 1s ease forwards 2.5s;
@@ -155,7 +157,7 @@ body {
   cursor: none;
 }
 
-#cursor {
+.cursor {
   top: -10rem;
   left: -10rem;
   width: 20px;
@@ -165,6 +167,8 @@ body {
   position: fixed;
   z-index: 1000;
   pointer-events: none;
+  -webkit-transition: 50ms ease-out;
+  transition: 50ms ease-out;
   -webkit-animation: cursorAnim .5s infinite alternate;
           animation: cursorAnim .5s infinite alternate;
 }
@@ -191,7 +195,7 @@ body {
   }
 }
 
-#cursor::after {
+.cursor::after {
   content: "";
   width: 20px;
   height: 20px;

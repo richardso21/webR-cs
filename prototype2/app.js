@@ -34,7 +34,7 @@ window.onload = function () {
 };
 
 function cursorfunction() {
-  const cursor = document.querySelector("#cursor");
+  const cursor = document.querySelector(".cursor");
 
   document.addEventListener('mousemove', e => {
     cursor.setAttribute("style", "top: " + (e.clientY - 10) + "px; left: " + (e.clientX - 10) + "px;")
@@ -42,6 +42,7 @@ function cursorfunction() {
 };
 
 function clickfunction(){
+  const cursor = document.querySelector(".cursor");
   document.addEventListener('click', () => {
     cursor.classList.add("expand");
     

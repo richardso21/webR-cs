@@ -8,7 +8,7 @@ body{
     cursor: none;
 }
 
-#cursor{
+.cursor{
     top: -10rem;
     left: -10rem;
     width: 20px;
@@ -18,7 +18,7 @@ body{
     position: fixed;
     z-index: 1000;
     pointer-events: none;
-    // transition: 50ms ease-out;
+    transition: 50ms ease-out;
     // transition-duration: 200ms;
     // transition-timing-function: ease-out;
     animation: cursorAnim .5s infinite alternate;
@@ -33,7 +33,7 @@ body{
     }
 }
 
-#cursor::after{
+.cursor::after{
     content: "";
     width: 20px;
     height: 20px;
@@ -70,6 +70,6 @@ body{
 
 .expand {
     // position: fixed;
-    animation: cursorAnim3 .5s forwards;
-    border: 1px solid red;
+    animation: cursorAnim3 .5s forwards;// !important; //i know this is shitty practice but i cant get it to work w/o overriding specificity and yeah ik i should've used classes before and ids now but who cares amirite
+    border: 1px solid red;// !important;
 }

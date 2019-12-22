@@ -13,6 +13,7 @@ body{
     left: -10rem;
     width: 20px;
     height: 20px;
+    // transform: translate(-50%,-50%);
     border: 1px solid white;
     border-radius: 50%;
     position: fixed;
@@ -21,17 +22,17 @@ body{
     transition: 50ms ease-out;
     // transition-duration: 200ms;
     // transition-timing-function: ease-out;
-    animation: cursorAnim .5s infinite alternate;
+    // animation: cursorAnim .5s infinite alternate;
 }
 
-@keyframes cursorAnim{
-    from{
-        transform: scale(1.2);
-    }
-    to{
-        transform: scale(.9);
-    }
-}
+// @keyframes cursorAnim{
+//     from{
+//         transform: scale(1.2);
+//     }
+//     to{
+//         transform: scale(.9);
+//     }
+// }
 
 .cursor::after{
     content: "";
@@ -43,17 +44,18 @@ body{
     opacity: .5;
     top: -8px;
     left: -8px;
-    animation: cursorAnim2 .5s infinite alternate;
+    // transition: 500ms ease-out;
+    // animation: cursorAnim2 .5s infinite alternate;
 }
 
-@keyframes cursorAnim2{
-    from{
-        transform: scale(1.2);
-    }
-    to{
-        transform: scale(.6);
-    }
-}
+// @keyframes cursorAnim2{
+//     from{
+//         transform: scale(1.2);
+//     }
+//     to{
+//         transform: scale(.6);
+//     }
+// }
 
 @keyframes cursorAnim3{
     0%{

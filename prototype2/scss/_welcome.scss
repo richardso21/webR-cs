@@ -2,10 +2,10 @@
     position: absolute;
     overflow: hidden;
     pointer-events: none;
-    z-index: 500;
+    z-index: 1000;
     height: 100%;
     width: 100%;
-    transform: scale(1.5);
+    // transform: scale(1.5);
     background-color: $darker;
     animation: fade-into 1s ease forwards 2.5s;
 }
@@ -13,10 +13,12 @@
 @keyframes fade-into{
     from{
         background-color: $darker;
+        z-index: 1000;
         // overflow: hidden;
     }
     to{
         background-color: transparent;
+        z-index: 10;
         // overflow: visible;
     }
 }
@@ -36,53 +38,62 @@ body{
     }
 }
 
-#welcome-intro{
-    // color: red;
-    visibility: visible;
-    z-index: 1000;
+.welcome-intro{
+    padding: 3rem;
+    // visibility: visible;
+    z-index: 50;
     position: absolute;
+    pointer-events: fill;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%) scale(1.5);
     animation: fill 0.5s ease forwards 2s;
+    transition: .5s ease;
+    box-shadow: inset 0 0 0 0 $darker;
+    // box-shadow: none;
 }
 
-#welcome-intro path{
+.welcome-intro:hover{
+    box-shadow: inset 0 0 0 310px $darker;   
+}
+
+
+.welcome-intro path{
     stroke-linejoin: round;
     stroke-linecap: round;
 }
 
-#welcome-intro path:nth-child(1){
+.welcome-intro path:nth-child(1){
     stroke-dasharray: 790px;
     stroke-dashoffset: 790px;
     animation: line-anim 2s ease forwards;
 }
-#welcome-intro path:nth-child(2){
+.welcome-intro path:nth-child(2){
     stroke-dasharray: 462px;
     stroke-dashoffset: 462px;
     animation: line-anim 2s ease forwards;
 }
-#welcome-intro path:nth-child(3){
+.welcome-intro path:nth-child(3){
     stroke-dasharray: 308px;
     stroke-dashoffset: 308px;
     animation: line-anim 2s ease forwards;
 }
-#welcome-intro path:nth-child(4){
+.welcome-intro path:nth-child(4){
     stroke-dasharray: 492px;
     stroke-dashoffset: 492px;
     animation: line-anim 2s ease forwards;
 }
-#welcome-intro path:nth-child(5){
+.welcome-intro path:nth-child(5){
     stroke-dasharray: 530px;
     stroke-dashoffset: 530px;
     animation: line-anim 2s ease forwards;
 }
-#welcome-intro path:nth-child(6){
+.welcome-intro path:nth-child(6){
     stroke-dasharray: 737px;
     stroke-dashoffset: 737px;
     animation: line-anim 2s ease forwards;
 }
-#welcome-intro path:nth-child(7){
+.welcome-intro path:nth-child(7){
     stroke-dasharray: 462px;
     stroke-dashoffset: 462px;
     animation: line-anim 2s ease forwards;

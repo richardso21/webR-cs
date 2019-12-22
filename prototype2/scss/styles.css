@@ -2,11 +2,9 @@
   position: absolute;
   overflow: hidden;
   pointer-events: none;
-  z-index: 500;
+  z-index: 1000;
   height: 100%;
   width: 100%;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
   background-color: #222831;
   -webkit-animation: fade-into 1s ease forwards 2.5s;
           animation: fade-into 1s ease forwards 2.5s;
@@ -15,18 +13,22 @@
 @-webkit-keyframes fade-into {
   from {
     background-color: #222831;
+    z-index: 1000;
   }
   to {
     background-color: transparent;
+    z-index: 10;
   }
 }
 
 @keyframes fade-into {
   from {
     background-color: #222831;
+    z-index: 1000;
   }
   to {
     background-color: transparent;
+    z-index: 10;
   }
 }
 
@@ -53,66 +55,76 @@ body {
   }
 }
 
-#welcome-intro {
-  visibility: visible;
-  z-index: 1000;
+.welcome-intro {
+  padding: 3rem;
+  z-index: 50;
   position: absolute;
+  pointer-events: fill;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%) scale(1.5);
+          transform: translate(-50%, -50%) scale(1.5);
   -webkit-animation: fill 0.5s ease forwards 2s;
           animation: fill 0.5s ease forwards 2s;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  -webkit-box-shadow: inset 0 0 0 0 #222831;
+          box-shadow: inset 0 0 0 0 #222831;
 }
 
-#welcome-intro path {
+.welcome-intro:hover {
+  -webkit-box-shadow: inset 0 0 0 310px #222831;
+          box-shadow: inset 0 0 0 310px #222831;
+}
+
+.welcome-intro path {
   stroke-linejoin: round;
   stroke-linecap: round;
 }
 
-#welcome-intro path:nth-child(1) {
+.welcome-intro path:nth-child(1) {
   stroke-dasharray: 790px;
   stroke-dashoffset: 790px;
   -webkit-animation: line-anim 2s ease forwards;
           animation: line-anim 2s ease forwards;
 }
 
-#welcome-intro path:nth-child(2) {
+.welcome-intro path:nth-child(2) {
   stroke-dasharray: 462px;
   stroke-dashoffset: 462px;
   -webkit-animation: line-anim 2s ease forwards;
           animation: line-anim 2s ease forwards;
 }
 
-#welcome-intro path:nth-child(3) {
+.welcome-intro path:nth-child(3) {
   stroke-dasharray: 308px;
   stroke-dashoffset: 308px;
   -webkit-animation: line-anim 2s ease forwards;
           animation: line-anim 2s ease forwards;
 }
 
-#welcome-intro path:nth-child(4) {
+.welcome-intro path:nth-child(4) {
   stroke-dasharray: 492px;
   stroke-dashoffset: 492px;
   -webkit-animation: line-anim 2s ease forwards;
           animation: line-anim 2s ease forwards;
 }
 
-#welcome-intro path:nth-child(5) {
+.welcome-intro path:nth-child(5) {
   stroke-dasharray: 530px;
   stroke-dashoffset: 530px;
   -webkit-animation: line-anim 2s ease forwards;
           animation: line-anim 2s ease forwards;
 }
 
-#welcome-intro path:nth-child(6) {
+.welcome-intro path:nth-child(6) {
   stroke-dasharray: 737px;
   stroke-dashoffset: 737px;
   -webkit-animation: line-anim 2s ease forwards;
           animation: line-anim 2s ease forwards;
 }
 
-#welcome-intro path:nth-child(7) {
+.welcome-intro path:nth-child(7) {
   stroke-dasharray: 462px;
   stroke-dashoffset: 462px;
   -webkit-animation: line-anim 2s ease forwards;
@@ -169,30 +181,6 @@ body {
   pointer-events: none;
   -webkit-transition: 50ms ease-out;
   transition: 50ms ease-out;
-  -webkit-animation: cursorAnim .5s infinite alternate;
-          animation: cursorAnim .5s infinite alternate;
-}
-
-@-webkit-keyframes cursorAnim {
-  from {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  to {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-}
-
-@keyframes cursorAnim {
-  from {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  to {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
 }
 
 .cursor::after {
@@ -205,30 +193,6 @@ body {
   opacity: .5;
   top: -8px;
   left: -8px;
-  -webkit-animation: cursorAnim2 .5s infinite alternate;
-          animation: cursorAnim2 .5s infinite alternate;
-}
-
-@-webkit-keyframes cursorAnim2 {
-  from {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  to {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
-  }
-}
-
-@keyframes cursorAnim2 {
-  from {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  to {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
-  }
 }
 
 @-webkit-keyframes cursorAnim3 {
@@ -339,7 +303,7 @@ body {
   position: sticky;
   top: 0.5rem;
   height: 0;
-  z-index: 10;
+  z-index: 100;
 }
 
 #nav-items {

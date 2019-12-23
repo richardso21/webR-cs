@@ -66,15 +66,15 @@ body {
           transform: translate(-50%, -50%) scale(1.5);
   -webkit-animation: fill 0.5s ease forwards 2s;
           animation: fill 0.5s ease forwards 2s;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   -webkit-box-shadow: inset 0 0 0 0 #222831;
           box-shadow: inset 0 0 0 0 #222831;
 }
 
 .welcome-intro:hover {
-  -webkit-box-shadow: inset 0 0 0 310px #222831;
-          box-shadow: inset 0 0 0 310px #222831;
+  -webkit-box-shadow: inset 0 0 0 150px #222831;
+          box-shadow: inset 0 0 0 150px #222831;
 }
 
 .welcome-intro path {
@@ -83,50 +83,29 @@ body {
 }
 
 .welcome-intro path:nth-child(1) {
-  stroke-dasharray: 790px;
-  stroke-dashoffset: 790px;
+  stroke-dasharray: 578px;
+  stroke-dashoffset: 578px;
   -webkit-animation: line-anim 2s ease forwards;
           animation: line-anim 2s ease forwards;
 }
 
 .welcome-intro path:nth-child(2) {
-  stroke-dasharray: 462px;
-  stroke-dashoffset: 462px;
+  stroke-dasharray: 386px;
+  stroke-dashoffset: 386px;
   -webkit-animation: line-anim 2s ease forwards;
           animation: line-anim 2s ease forwards;
 }
 
 .welcome-intro path:nth-child(3) {
-  stroke-dasharray: 308px;
-  stroke-dashoffset: 308px;
+  stroke-dasharray: 458px;
+  stroke-dashoffset: 458px;
   -webkit-animation: line-anim 2s ease forwards;
           animation: line-anim 2s ease forwards;
 }
 
 .welcome-intro path:nth-child(4) {
-  stroke-dasharray: 492px;
-  stroke-dashoffset: 492px;
-  -webkit-animation: line-anim 2s ease forwards;
-          animation: line-anim 2s ease forwards;
-}
-
-.welcome-intro path:nth-child(5) {
-  stroke-dasharray: 530px;
-  stroke-dashoffset: 530px;
-  -webkit-animation: line-anim 2s ease forwards;
-          animation: line-anim 2s ease forwards;
-}
-
-.welcome-intro path:nth-child(6) {
-  stroke-dasharray: 737px;
-  stroke-dashoffset: 737px;
-  -webkit-animation: line-anim 2s ease forwards;
-          animation: line-anim 2s ease forwards;
-}
-
-.welcome-intro path:nth-child(7) {
-  stroke-dasharray: 462px;
-  stroke-dashoffset: 462px;
+  stroke-dasharray: 501px;
+  stroke-dashoffset: 501px;
   -webkit-animation: line-anim 2s ease forwards;
           animation: line-anim 2s ease forwards;
 }
@@ -165,10 +144,6 @@ body {
   overflow-x: hidden;
 }
 
-* {
-  cursor: none;
-}
-
 .cursor {
   top: -10rem;
   left: -10rem;
@@ -190,7 +165,7 @@ body {
   position: absolute;
   border: 8px solid gray;
   border-radius: 50%;
-  opacity: .5;
+  opacity: 0.5;
   top: -8px;
   left: -8px;
 }
@@ -228,8 +203,8 @@ body {
 }
 
 .expand {
-  -webkit-animation: cursorAnim3 .5s forwards;
-          animation: cursorAnim3 .5s forwards;
+  -webkit-animation: cursorAnim3 0.5s forwards;
+          animation: cursorAnim3 0.5s forwards;
   border: 1px solid red;
 }
 
@@ -268,33 +243,38 @@ body {
   }
 }
 
-.button {
-  display: inline-block;
+#intro-content p {
   position: absolute;
-  bottom: 20%;
+  bottom: 10%;
   left: 50%;
-}
-
-#intro-button {
-  background-color: white;
-  padding: 0 3rem;
-  border: 0.1rem solid transparent;
-  border-radius: 1rem 0.5rem;
-  color: #222831;
-  text-decoration: none;
-  font-size: 2.5rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-style: italic;
-  text-align: center;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  -webkit-box-shadow: inset 0 0 0 0 black;
-          box-shadow: inset 0 0 0 0 black;
+  font-size: 48px;
+  -webkit-animation: highlight 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86) forwards 3.25s;
+          animation: highlight 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86) forwards 3.25s;
 }
 
-#intro-button:hover {
-  -webkit-box-shadow: inset 0 60px 0 0 #222831;
-          box-shadow: inset 0 60px 0 0 #222831;
-  color: white;
+@-webkit-keyframes highlight {
+  from {
+    -webkit-box-shadow: inset 0 0 0 0.01px #393e46;
+            box-shadow: inset 0 0 0 0.01px #393e46;
+  }
+  to {
+    -webkit-box-shadow: inset 775px 0 0 0 #393e46;
+            box-shadow: inset 775px 0 0 0 #393e46;
+  }
+}
+
+@keyframes highlight {
+  from {
+    -webkit-box-shadow: inset 0 0 0 0.01px #393e46;
+            box-shadow: inset 0 0 0 0.01px #393e46;
+  }
+  to {
+    -webkit-box-shadow: inset 775px 0 0 0 #393e46;
+            box-shadow: inset 775px 0 0 0 #393e46;
+  }
 }
 
 .navbar {
@@ -351,10 +331,8 @@ body {
           box-shadow: inset 0 -60px 0 0 white;
 }
 
-.a::after {
-  content: "";
-  -webkit-box-shadow: inset 0 -60px 0 0 grey;
-          box-shadow: inset 0 -60px 0 0 grey;
+#a_1 {
+  margin-right: auto;
 }
 
 #a_1:hover {
@@ -383,7 +361,6 @@ body {
 
 #logo {
   height: 100%;
-  margin-right: auto;
 }
 
 .category1 {
@@ -529,7 +506,7 @@ body {
 .overlap-pics:hover .overlap-pics-indv:not(:hover) {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
-  opacity: .3;
+  opacity: 0.3;
 }
 
 #oppics_1 {
@@ -554,7 +531,14 @@ body {
 }
 
 html::-webkit-scrollbar {
-  display: none;
+  width: 0.5rem;
+  background-color: #222831;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #393e46;
 }
 
 body {

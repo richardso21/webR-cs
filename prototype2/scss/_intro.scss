@@ -1,7 +1,7 @@
 .intro {
   z-index: 1;
   background-attachment: fixed;
-//   background-size: cover;
+  //   background-size: cover;
   height: 100vh;
   color: white;
   background: linear-gradient(315deg, #0663f3, #ea1515);
@@ -22,30 +22,48 @@
   }
 }
 
-.button {
-  display: inline-block;
+// .button {
+//   display: inline-block;
+//   position: absolute;
+//   bottom: 20%;
+//   left: 50%;
+//   // transform: translate(-50%,-70%);
+// }
+
+// #intro-button {
+//   background-color: white;
+//   padding: 0 3rem;
+//   border: 0.1rem solid transparent;
+//   border-radius: 1rem 0.5rem;
+//   color: $darker;
+//   text-decoration: none;
+//   font-size: 2.5rem;
+//   font-style: italic;
+//   text-align: center;
+//   transition: 0.3s ease;
+//   box-shadow: inset 0 0 0 0 black;
+// }
+
+// #intro-button:hover {
+//   box-shadow: inset 0 60px 0 0 $darker;
+//   color: white;
+// }
+
+#intro-content p {
   position: absolute;
-  bottom: 20%;
+  bottom: 10%;
   left: 50%;
-  // transform: translate(-50%,-70%);
-}
-
-#intro-button {
-  background-color: white;
-  padding: 0 3rem;
-  border: 0.1rem solid transparent;
-  border-radius: 1rem 0.5rem;
-  color: $darker;
-  text-decoration: none;
-  font-size: 2.5rem;
+  transform: translate(-50%, -50%);
   font-style: italic;
-  text-align: center;
-  transition: 0.3s ease;
-  box-shadow: inset 0 0 0 0 black;
+  font-size: 48px;
+  animation: highlight 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86) forwards 3.25s;
 }
 
-#intro-button:hover {
-  box-shadow: inset 0 60px 0 0 $darker;
-  color: white;
+@keyframes highlight {
+  from {
+    box-shadow: inset 0 0 0 0.01px $dark;
+  }
+  to {
+    box-shadow: inset 775px 0 0 0 $dark;
+  }
 }
-

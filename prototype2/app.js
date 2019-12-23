@@ -1,3 +1,4 @@
+//dynamic nav bar
 window.onscroll = function() {
   scrollFunction();
 };
@@ -25,3 +26,40 @@ function scrollFunction() {
   }
 }
 
+//cursor follower
+window.onload = function() {
+  cursorfunction();
+  clickfunction();
+  welcomefunction();
+};
+
+function cursorfunction() {
+  const cursor = document.querySelector(".cursor");
+
+  document.addEventListener("mousemove", e => {
+    cursor.setAttribute(
+      "style",
+      "top: " + (e.clientY - 10) + "px; left: " + (e.clientX - 10) + "px;"
+    );
+  });
+}
+
+function clickfunction() {
+  const cursor = document.querySelector(".cursor");
+  document.addEventListener("click", () => {
+    cursor.classList.add("expand");
+
+    setTimeout(() => {
+      cursor.classList.remove("expand");
+    }, 500);
+  });
+}
+
+// // welcome-intro
+// function welcomefunction() {
+//   const welcome = document.querySelectorAll(".welcome-intro path");
+//   // console.log(welcome);
+//   for (let i = 0; i < welcome.length; i++) {
+//     console.log(`Letter ${i} is ${welcome[i].getTotalLength()}`);
+//   }
+// }

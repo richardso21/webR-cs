@@ -9,77 +9,96 @@
     <link rel="icon" href="media/logo.png" />
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
     <script src="app.js"></script>
-    <script src="cursor.js"></script>
+    <!-- <script src="cursor.js"></script> -->
     <title>prototype 2</title>
 </head>
 
 <body>
-    <div id="cursor"></div>
+    <div class="cursor"></div>
 
-        <div class="navbar">
-            <div id="nav-items">
-                <img src="media/logo.png" alt="logo" id="logo" />
-                <a href="#intro" class="a" id="a_1"><span class="top_button">foo</span></a>
-                <a href="#category1" class="a" id="a_2"><span class="top_button">bar</span></a>
-                <a href="#category2" class="a" id="a_3"><span class="top_button">hello</span></a>
-                <a href="http://google.com" class="a" id="a_help"><span class="top_button">Help</span></a>
+    <div class="navbar">
+        <div id="nav-items">
+            <img src="media/logo.png" alt="logo" id="logo" />
+            <a href="#intro" class="a" id="a_1"><span class="top_button">foo</span></a>
+            <a href="#category1" class="a" id="a_2"><span class="top_button">bar</span></a>
+            <a href="#category2" class="a" id="a_3"><span class="top_button">hello</span></a>
+            <a href="http://google.com" class="a" id="a_help"><span class="top_button">Help</span></a>
+        </div>
+    </div>
+
+    <div class="welcome-content">
+        <a href="#category1">
+            <svg class="welcome-intro" width="348" height="110" viewBox="0 0 348 110" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M22.176 105L3.45599 34.296H20.16L28.656 71.016C29.424 74.376 30.048 77.736 30.528 81.096C31.104 84.456 31.728 87.864 32.4 91.32H32.976C33.648 87.864 34.32 84.456 34.992 81.096C35.76 77.736 36.576 74.376 37.44 71.016L46.656 34.296H61.776L71.136 71.016C72 74.376 72.816 77.736 73.584 81.096C74.352 84.456 75.12 87.864 75.888 91.32H76.464C77.136 87.864 77.76 84.456 78.336 81.096C78.912 77.736 79.536 74.376 80.208 71.016L88.704 34.296H104.256L86.256 105H66.528L58.32 72.024C57.552 68.664 56.832 65.352 56.16 62.088C55.488 58.728 54.768 55.176 54 51.432H53.424C52.752 55.176 52.08 58.728 51.408 62.088C50.736 65.448 50.016 68.808 49.248 72.168L41.184 105H22.176Z"
+                    stroke="white" stroke-width="5" />
+                <path
+                    d="M147.627 106.728C142.731 106.728 138.171 105.912 133.947 104.28C129.723 102.552 126.027 100.104 122.859 96.936C119.691 93.768 117.195 89.928 115.371 85.416C113.643 80.808 112.779 75.576 112.779 69.72C112.779 63.96 113.691 58.776 115.515 54.168C117.339 49.56 119.739 45.672 122.715 42.504C125.787 39.336 129.291 36.888 133.227 35.16C137.163 33.432 141.195 32.568 145.323 32.568C150.123 32.568 154.347 33.384 157.995 35.016C161.643 36.648 164.667 38.952 167.067 41.928C169.563 44.904 171.435 48.456 172.683 52.584C173.931 56.712 174.555 61.224 174.555 66.12C174.555 67.752 174.459 69.288 174.267 70.728C174.171 72.168 174.027 73.32 173.835 74.184H128.907C129.675 80.52 131.883 85.416 135.531 88.872C139.275 92.232 144.027 93.912 149.787 93.912C152.859 93.912 155.691 93.48 158.283 92.616C160.971 91.656 163.611 90.36 166.203 88.728L171.819 99.096C168.459 101.304 164.715 103.128 160.587 104.568C156.459 106.008 152.139 106.728 147.627 106.728ZM128.763 62.952H160.155C160.155 57.48 158.955 53.208 156.555 50.136C154.251 46.968 150.651 45.384 145.755 45.384C141.531 45.384 137.835 46.872 134.667 49.848C131.499 52.824 129.531 57.192 128.763 62.952Z"
+                    stroke="white" stroke-width="5" />
+                <path
+                    d="M224.643 106.728C221.379 106.728 218.067 105.96 214.707 104.424C211.443 102.792 208.323 100.488 205.347 97.512H204.915L203.475 105H190.371V3.336H206.931V29.544L206.499 41.352C209.475 38.76 212.691 36.648 216.147 35.016C219.699 33.384 223.299 32.568 226.947 32.568C231.363 32.568 235.299 33.432 238.755 35.16C242.211 36.792 245.139 39.192 247.539 42.36C249.939 45.432 251.763 49.176 253.011 53.592C254.259 58.008 254.883 62.952 254.883 68.424C254.883 74.472 254.019 79.896 252.291 84.696C250.659 89.4 248.451 93.384 245.667 96.648C242.883 99.912 239.667 102.408 236.019 104.136C232.371 105.864 228.579 106.728 224.643 106.728ZM221.187 93.048C225.891 93.048 229.827 91.032 232.995 87C236.163 82.872 237.747 76.776 237.747 68.712C237.747 61.608 236.547 56.088 234.147 52.152C231.747 48.216 227.859 46.248 222.483 46.248C217.491 46.248 212.307 48.888 206.931 54.168V87.144C209.427 89.352 211.875 90.888 214.275 91.752C216.771 92.616 219.075 93.048 221.187 93.048Z"
+                    stroke="white" stroke-width="5" />
+                <path
+                    d="M272.952 105V10.824H304.776C309.672 10.824 314.232 11.304 318.456 12.264C322.68 13.224 326.328 14.808 329.4 17.016C332.472 19.128 334.872 21.96 336.6 25.512C338.424 29.064 339.336 33.48 339.336 38.76C339.336 45.96 337.608 51.768 334.152 56.184C330.792 60.6 326.28 63.768 320.616 65.688L343.08 105H324.36L304.056 68.136H289.656V105H272.952ZM289.656 54.888H303.048C309.48 54.888 314.376 53.544 317.736 50.856C321.192 48.168 322.92 44.136 322.92 38.76C322.92 33.288 321.192 29.496 317.736 27.384C314.376 25.272 309.48 24.216 303.048 24.216H289.656V54.888Z"
+                    stroke="white" stroke-width="5" />
+            </svg>
+
+        </a>
+    </div>
+
+    <div class="content">
+        <div class="intro" id="intro">
+            <div id="intro-content">
+                <!-- <div class="button">
+                    <a href="#category1" type="button" id="intro-button">Onwards!</a>
+                </div> -->
+                <!-- this has essentially become a holder for dynamic background and welcome screen -->
+                <p>re-revolutionizing the world wide web</p>
             </div>
         </div>
 
-        <div class="content">
-            <div class="intro" id="intro">
-                <div class="intro-content">
-                    <h1>Welcome</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <div class="button">
-                        <a href="#category1" type="button" id="intro-button">Onwards!</a>
+        <div class="category1" id="category1">
+            <div class="category1-items" id="items_1_1">
+                <h1>Flex 1</h1>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
+                    cumque nobis magni provident perspiciatis facilis exercitationem
+                    velit fugit, illum, nisi ipsam? Consequuntur doloremque aspernatur
+                    impedit deleniti quae, est voluptatibus tenetur?
+                </p>
+            </div>
+            <div class="bg" id="bg_1"></div>
+
+            <img src="media/logo.png" alt="logo" class="category1-items" id="items_1_2" />
+            <div class="bg" id="bg_2"></div>
+
+            <div class="category1-items" id="items_1_3">
+                <h1>Flex 2</h1>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+                    obcaecati. Vel eos alias quasi dignissimos quisquam, magni magnam
+                    unde quos ab modi pariatur ullam debitis nostrum doloribus, incidunt
+                    doloremque autem.
+                </p>
+            </div>
+            <div class="bg" id="bg_3"></div>
+        </div>
+
+        <div class="category2" id="category2">
+            <div class="layer1">
+                <div class="overlap-parent">
+                    <div class="overlap-pics">
+                        <img src="http://picsum.photos/id/237/300" alt="" class="overlap-pics-indv" id="oppics_1" />
+                        <img src="http://picsum.photos/id/238/300" alt="" class="overlap-pics-indv" id="oppics_2" />
+                        <img src="http://picsum.photos/id/239/300" alt="" class="overlap-pics-indv" id="oppics_3" />
                     </div>
                 </div>
-            </div>
 
-            <div class="category1" id="category1">
-                <div class="category1-items" id="items_1_1">
-                    <h1>Flex 1</h1>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
-                        cumque nobis magni provident perspiciatis facilis exercitationem
-                        velit fugit, illum, nisi ipsam? Consequuntur doloremque aspernatur
-                        impedit deleniti quae, est voluptatibus tenetur?
-                    </p>
-                </div>
-                <div class="bg" id="bg_1"></div>
-
-                <img src="media/logo.png" alt="logo" class="category1-items" id="items_1_2" />
-                <div class="bg" id="bg_2"></div>
-
-                <div class="category1-items" id="items_1_3">
-                    <h1>Flex 2</h1>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-                        obcaecati. Vel eos alias quasi dignissimos quisquam, magni magnam
-                        unde quos ab modi pariatur ullam debitis nostrum doloribus, incidunt
-                        doloremque autem.
-                    </p>
-                </div>
-                <div class="bg" id="bg_3"></div>
-            </div>
-
-            <div class="category2" id="category2">
-
-                <div class="layer1">
-                    <div class="overlap-parent">
-                        <div class="overlap-pics">
-                            <img src="http://picsum.photos/id/237/300" alt="" class="overlap-pics-indv" id="oppics_1" />
-                            <img src="http://picsum.photos/id/238/300" alt="" class="overlap-pics-indv" id="oppics_2" />
-                            <img src="http://picsum.photos/id/239/300" alt="" class="overlap-pics-indv" id="oppics_3" />
-                        </div>
-                    </div>
-
-                    <div class="pop-text"></div>
-                </div>
-
+                <div class="pop-text"></div>
             </div>
         </div>
+    </div>
 </body>
 
 </html>

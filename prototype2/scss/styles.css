@@ -1,12 +1,152 @@
+.welcome-content {
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  background-color: #222831;
+  -webkit-animation: fade-into 1s ease forwards 2.5s;
+          animation: fade-into 1s ease forwards 2.5s;
+}
+
+@-webkit-keyframes fade-into {
+  from {
+    background-color: #222831;
+    z-index: 1000;
+  }
+  to {
+    background-color: transparent;
+    z-index: 10;
+  }
+}
+
+@keyframes fade-into {
+  from {
+    background-color: #222831;
+    z-index: 1000;
+  }
+  to {
+    background-color: transparent;
+    z-index: 10;
+  }
+}
+
+body {
+  -webkit-animation: stop-scroll 2.5s step-end forwards;
+          animation: stop-scroll 2.5s step-end forwards;
+}
+
+@-webkit-keyframes stop-scroll {
+  from {
+    overflow: hidden;
+  }
+  to {
+    overflow: visible;
+  }
+}
+
+@keyframes stop-scroll {
+  from {
+    overflow: hidden;
+  }
+  to {
+    overflow: visible;
+  }
+}
+
+.welcome-intro {
+  padding: 3rem;
+  z-index: 50;
+  position: absolute;
+  pointer-events: fill;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(1.5);
+          transform: translate(-50%, -50%) scale(1.5);
+  -webkit-animation: fill 0.5s ease forwards 2s;
+          animation: fill 0.5s ease forwards 2s;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  -webkit-box-shadow: inset 0 0 0 0 #222831;
+          box-shadow: inset 0 0 0 0 #222831;
+}
+
+.welcome-intro:hover {
+  -webkit-box-shadow: inset 0 0 0 150px #222831;
+          box-shadow: inset 0 0 0 150px #222831;
+}
+
+.welcome-intro path {
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.welcome-intro path:nth-child(1) {
+  stroke-dasharray: 578px;
+  stroke-dashoffset: 578px;
+  -webkit-animation: line-anim 2s ease forwards;
+          animation: line-anim 2s ease forwards;
+}
+
+.welcome-intro path:nth-child(2) {
+  stroke-dasharray: 386px;
+  stroke-dashoffset: 386px;
+  -webkit-animation: line-anim 2s ease forwards;
+          animation: line-anim 2s ease forwards;
+}
+
+.welcome-intro path:nth-child(3) {
+  stroke-dasharray: 458px;
+  stroke-dashoffset: 458px;
+  -webkit-animation: line-anim 2s ease forwards;
+          animation: line-anim 2s ease forwards;
+}
+
+.welcome-intro path:nth-child(4) {
+  stroke-dasharray: 501px;
+  stroke-dashoffset: 501px;
+  -webkit-animation: line-anim 2s ease forwards;
+          animation: line-anim 2s ease forwards;
+}
+
+@-webkit-keyframes line-anim {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@-webkit-keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+
 body {
   overflow-x: hidden;
 }
 
-* {
-  cursor: none;
-}
-
-#cursor {
+.cursor {
+  top: -10rem;
+  left: -10rem;
   width: 20px;
   height: 20px;
   border: 1px solid white;
@@ -16,78 +156,67 @@ body {
   pointer-events: none;
   -webkit-transition: 50ms ease-out;
   transition: 50ms ease-out;
-  -webkit-animation: cursorAnim .5s infinite alternate;
-          animation: cursorAnim .5s infinite alternate;
 }
 
-@-webkit-keyframes cursorAnim {
-  from {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  to {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-}
-
-@keyframes cursorAnim {
-  from {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  to {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-}
-
-#cursor::after {
+.cursor::after {
   content: "";
   width: 20px;
   height: 20px;
   position: absolute;
   border: 8px solid gray;
   border-radius: 50%;
-  opacity: .5;
+  opacity: 0.5;
   top: -8px;
   left: -8px;
-  -webkit-animation: cursorAnim2 .5s infinite alternate;
-          animation: cursorAnim2 .5s infinite alternate;
 }
 
-@-webkit-keyframes cursorAnim2 {
-  from {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+@-webkit-keyframes cursorAnim3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
-  to {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
+  50% {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
   }
 }
 
-@keyframes cursorAnim2 {
-  from {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+@keyframes cursorAnim3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
-  to {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
+  50% {
+    -webkit-transform: scale(3);
+            transform: scale(3);
   }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.expand {
+  -webkit-animation: cursorAnim3 0.5s forwards;
+          animation: cursorAnim3 0.5s forwards;
+  border: 1px solid red;
 }
 
 .intro {
   z-index: 1;
   background-attachment: fixed;
-  background-size: cover;
   height: 100vh;
   color: white;
   background: linear-gradient(315deg, #0663f3, #ea1515);
   background-size: 400% 400%;
   -webkit-animation: gradientbg 8s ease infinite;
-  animation: gradientbg 8s ease infinite;
+          animation: gradientbg 8s ease infinite;
 }
 
 @-webkit-keyframes gradientbg {
@@ -114,48 +243,38 @@ body {
   }
 }
 
-.intro-content {
-  z-index: 2;
-  position: fixed;
-  bottom: 30%;
-  left: 10%;
-}
-
-.intro-content h1 {
-  margin: 1rem 0;
-  font-size: 72px;
-}
-
-.intro-content p {
-  font-size: 28px;
+#intro-content p {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-style: italic;
+  font-size: 48px;
+  -webkit-animation: highlight 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86) forwards 3.25s;
+          animation: highlight 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86) forwards 3.25s;
 }
 
-.button {
-  display: inline-block;
-  position: relative;
+@-webkit-keyframes highlight {
+  from {
+    -webkit-box-shadow: inset 0 0 0 0.01px #393e46;
+            box-shadow: inset 0 0 0 0.01px #393e46;
+  }
+  to {
+    -webkit-box-shadow: inset 775px 0 0 0 #393e46;
+            box-shadow: inset 775px 0 0 0 #393e46;
+  }
 }
 
-#intro-button {
-  background-color: white;
-  padding: 0 3rem;
-  border: 0.1rem solid transparent;
-  border-radius: 1rem 0.5rem;
-  color: #222831;
-  text-decoration: none;
-  font-size: 2.5rem;
-  font-style: italic;
-  text-align: center;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  -webkit-box-shadow: inset 0 0 0 0 black;
-          box-shadow: inset 0 0 0 0 black;
-}
-
-#intro-button:hover {
-  -webkit-box-shadow: inset 0 60px 0 0 #222831;
-          box-shadow: inset 0 60px 0 0 #222831;
-  color: white;
+@keyframes highlight {
+  from {
+    -webkit-box-shadow: inset 0 0 0 0.01px #393e46;
+            box-shadow: inset 0 0 0 0.01px #393e46;
+  }
+  to {
+    -webkit-box-shadow: inset 775px 0 0 0 #393e46;
+            box-shadow: inset 775px 0 0 0 #393e46;
+  }
 }
 
 .navbar {
@@ -164,7 +283,7 @@ body {
   position: sticky;
   top: 0.5rem;
   height: 0;
-  z-index: 10;
+  z-index: 100;
 }
 
 #nav-items {
@@ -212,10 +331,8 @@ body {
           box-shadow: inset 0 -60px 0 0 white;
 }
 
-.a::after {
-  content: "";
-  -webkit-box-shadow: inset 0 -60px 0 0 grey;
-          box-shadow: inset 0 -60px 0 0 grey;
+#a_1 {
+  margin-right: auto;
 }
 
 #a_1:hover {
@@ -244,7 +361,6 @@ body {
 
 #logo {
   height: 100%;
-  margin-right: auto;
 }
 
 .category1 {
@@ -305,8 +421,7 @@ body {
 }
 
 #bg_2 {
-  background: -webkit-gradient(linear, left top, right top, from(#ff2242), color-stop(#e79736), color-stop(#3755f8), color-stop(#33abfa), to(#00af2e));
-  background: linear-gradient(to right, #ff2242, #e79736, #3755f8, #33abfa, #00af2e);
+  background: linear-gradient(45deg, #ff2242, #e79736, #3755f8, #33abfa, #00af2e);
 }
 
 #bg_3 {
@@ -391,7 +506,7 @@ body {
 .overlap-pics:hover .overlap-pics-indv:not(:hover) {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
-  opacity: .3;
+  opacity: 0.3;
 }
 
 #oppics_1 {
@@ -415,34 +530,21 @@ body {
           flex: 1;
 }
 
+html::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: #222831;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #393e46;
+}
+
 body {
   margin: 0;
   border: 0;
   font-family: "Source Sans Pro", sans-serif;
-  -webkit-animation: fadeIn ease 2s;
-          animation: fadeIn ease 2s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 html {

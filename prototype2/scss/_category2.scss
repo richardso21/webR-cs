@@ -22,54 +22,48 @@
 }
 
 .overlap-pics {
-    /* width: 0; */
-    position: relative;
-    height: 0;
-    width: 100%;
-    margin: 3rem;
-    z-index: 4;
+  /* width: 0; */
+  position: relative;
+  height: 0;
+  width: 100%;
+  margin: 3rem;
+  z-index: 4;
 }
 
-.overlap-pics-indv{
-    position: absolute;
-    border-radius: 0.2rem 1rem;
-    box-shadow: 0rem 0rem 1rem black;
-    transition: 0.5s cubic-bezier(.18,.89,.32,1.28);
-    // outline: none;
-
+.overlap-pics-indv {
+  position: absolute;
+  border-radius: 0.2rem 1rem;
+  box-shadow: 0rem 0rem 1rem black;
+  transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  // outline: none;
 }
 
-.overlap-pics-indv:hover{
-    transform: scale(1.2);
-    z-index: 2;
-    // outline: 1rem solid blue;
+.overlap-pics-indv:hover {
+  transform: scale(1.2);
+  z-index: 2;
+  // outline: 1rem solid blue;
 }
 
 .overlap-pics:hover .overlap-pics-indv:not(:hover) {
-    transform: scale(.9);
-    opacity: .3;
+  transform: scale(0.9);
+  opacity: 0.3;
 }
 
-#oppics_1{
-    top: 5rem;
-    left: 25rem; 
+#oppics_1 {
+  top: 5rem;
+  left: 25rem;
 }
 
-#oppics_2{
-    top: -2rem;
-    left: 15rem;
+#oppics_2 {
+  top: -2rem;
+  left: 15rem;
 }
 
-#oppics_3{
-    top: 7rem;
-    left: 10rem;
+#oppics_3 {
+  top: 7rem;
+  left: 10rem;
 }
-
-
-
-
 
 .pop-text {
-    flex: 1;
-  }
-
+  flex: 1;
+}

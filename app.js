@@ -29,8 +29,8 @@ function scrollFunction() {
 //cursor follower
 window.onload = function() {
   cursorfunction();
-  clickfunction();
-  welcomefunction();
+  // clickfunction();
+  // welcomefunction();
 };
 
 function cursorfunction() {
@@ -42,10 +42,7 @@ function cursorfunction() {
       "top: " + (e.clientY - 10) + "px; left: " + (e.clientX - 10) + "px;"
     );
   });
-}
 
-function clickfunction() {
-  const cursor = document.querySelector(".cursor");
   document.addEventListener("click", () => {
     cursor.classList.add("expand");
 
@@ -54,6 +51,14 @@ function clickfunction() {
     }, 500);
   });
 }
+
+// function hoverfunction() {
+//   const cursor = document.querySelector(".cursor");
+// }
+
+// function clickfunction() {
+//   const cursor = document.querySelector(".cursor");
+// }
 
 // // welcome-intro
 // function welcomefunction() {

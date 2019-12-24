@@ -66,8 +66,8 @@ body {
           transform: translate(-50%, -50%) scale(1.5);
   -webkit-animation: fill-in 0.5s ease forwards 2s;
           animation: fill-in 0.5s ease forwards 2s;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   -webkit-box-shadow: inset 0 0 0 0 #222831;
           box-shadow: inset 0 0 0 0 #222831;
 }
@@ -160,8 +160,8 @@ body {
   pointer-events: none;
   -webkit-transition: top 50ms ease-out, left 50ms ease-out, border 250ms ease, -webkit-transform 250ms ease;
   transition: top 50ms ease-out, left 50ms ease-out, border 250ms ease, -webkit-transform 250ms ease;
-  transition: top 50ms ease-out, left 50ms ease-out, transform 250ms ease, border 250ms ease;
-  transition: top 50ms ease-out, left 50ms ease-out, transform 250ms ease, border 250ms ease, -webkit-transform 250ms ease;
+  transition: top 50ms ease-out, left 50ms ease-out, transform 250ms ease, border 250ms ease;
+  transition: top 50ms ease-out, left 50ms ease-out, transform 250ms ease, border 250ms ease, -webkit-transform 250ms ease;
 }
 
 .cursor::after {
@@ -227,8 +227,8 @@ body {
   color: white;
   background: linear-gradient(315deg, #0663f3, #ea1515);
   background-size: 400% 400%;
-  -webkit-animation: gradientbg 8s ease infinite, hint 1s ease-in-out forwards 5.5s;
-          animation: gradientbg 8s ease infinite, hint 1s ease-in-out forwards 5.5s;
+  -webkit-animation: gradientbg 8s ease infinite, hint 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards 4.25s;
+          animation: gradientbg 8s ease infinite, hint 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards 4.25s;
 }
 
 @-webkit-keyframes gradientbg {
@@ -260,7 +260,7 @@ body {
     height: 100vh;
   }
   to {
-    height: 95vh;
+    height: 90vh;
   }
 }
 
@@ -269,7 +269,7 @@ body {
     height: 100vh;
   }
   to {
-    height: 95vh;
+    height: 90vh;
   }
 }
 
@@ -396,11 +396,20 @@ body {
 
 .slider {
   overflow: hidden;
+  padding: 8rem 0rem;
 }
 
 #slider-content {
   height: 200px;
-  margin: 4rem;
+  position: relative;
+  left: 100%;
+}
+
+.wrapper {
+  height: 200vh;
+  background: #222831;
+  -webkit-box-shadow: 0 0 1rem #222831;
+          box-shadow: 0 0 1rem #222831;
 }
 
 html::-webkit-scrollbar {

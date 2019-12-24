@@ -6,7 +6,8 @@
   color: white;
   background: linear-gradient(315deg, #0663f3, #ea1515);
   background-size: 400% 400%;
-  animation: gradientbg 8s ease infinite, hint 1s ease-in-out forwards 5.5s;
+  animation: gradientbg 8s ease infinite,
+    hint 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards 4.25s;
 }
 
 @keyframes gradientbg {
@@ -26,7 +27,7 @@
     height: 100vh;
   }
   to {
-    height: 95vh;
+    height: 90vh;
   }
 }
 

@@ -1,8 +1,10 @@
 .slider {
   overflow: hidden;
+  padding: 8rem 0rem;
 }
 
 #slider-content {
   height: 200px;
-  margin: 4rem;
+  position: relative;
+  left: 100%;
 }

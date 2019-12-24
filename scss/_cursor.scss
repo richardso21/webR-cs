@@ -26,15 +26,6 @@ body {
   // animation: cursorAnim .5s infinite alternate;
 }
 
-// @keyframes cursorAnim{
-//     from{
-//         transform: scale(1.2);
-//     }
-//     to{
-//         transform: scale(.9);
-//     }
-// }
-
 .cursor::after {
   content: "";
   width: 20px;

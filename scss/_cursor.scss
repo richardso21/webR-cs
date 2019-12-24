@@ -19,7 +19,8 @@ body {
   position: fixed;
   z-index: 1000;
   pointer-events: none;
-  transition: 50ms ease-out;
+  transition: top 50ms ease-out, left 50ms ease-out, transform 250ms ease,
+    border 250ms ease;
   // transition-duration: 200ms;
   // transition-timing-function: ease-out;
   // animation: cursorAnim .5s infinite alternate;
@@ -72,6 +73,11 @@ body {
 
 .expand {
   // position: fixed;
-  animation: cursorAnim3 0.5s forwards; // !important;
-  border: 1px solid red; // !important;
+  animation: cursorAnim3 0.5s forwards !important; // !important;
+  border: 1px solid red !important; // !important;
+}
+
+.valid {
+  border: 2px solid green;
+  transform: scale(0.75);
 }

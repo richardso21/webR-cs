@@ -154,8 +154,10 @@ body {
   position: fixed;
   z-index: 1000;
   pointer-events: none;
-  -webkit-transition: 50ms ease-out;
-  transition: 50ms ease-out;
+  -webkit-transition: top 50ms ease-out, left 50ms ease-out, border 250ms ease, -webkit-transform 250ms ease;
+  transition: top 50ms ease-out, left 50ms ease-out, border 250ms ease, -webkit-transform 250ms ease;
+  transition: top 50ms ease-out, left 50ms ease-out, transform 250ms ease, border 250ms ease;
+  transition: top 50ms ease-out, left 50ms ease-out, transform 250ms ease, border 250ms ease, -webkit-transform 250ms ease;
 }
 
 .cursor::after {
@@ -203,9 +205,15 @@ body {
 }
 
 .expand {
-  -webkit-animation: cursorAnim3 0.5s forwards;
-          animation: cursorAnim3 0.5s forwards;
-  border: 1px solid red;
+  -webkit-animation: cursorAnim3 0.5s forwards !important;
+          animation: cursorAnim3 0.5s forwards !important;
+  border: 1px solid red !important;
+}
+
+.valid {
+  border: 2px solid green;
+  -webkit-transform: scale(0.75);
+          transform: scale(0.75);
 }
 
 .intro {
@@ -362,173 +370,6 @@ body {
 
 #logo {
   height: 100%;
-}
-
-.category1 {
-  z-index: 3;
-  min-height: 25rem;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #222831;
-  padding: 5rem 0rem;
-  position: relative;
-  -webkit-box-shadow: 0rem 0rem 1rem black;
-          box-shadow: 0rem 0rem 1rem black;
-}
-
-.category1-items {
-  z-index: 3;
-  width: 20%;
-  background-color: #393e46;
-  -webkit-box-shadow: 0rem 0rem 1rem black;
-          box-shadow: 0rem 0rem 1rem black;
-  color: white;
-  -webkit-transition: 0.3s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transition: 0.3s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-
-.category1-items * {
-  padding: 1rem 2rem;
-}
-
-#items_1_2 {
-  height: 100%;
-  padding: 0;
-}
-
-.bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  background: none;
-  opacity: 0;
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-#bg_1 {
-  background: linear-gradient(135deg, #ff2242 15%, #e79736 100%);
-}
-
-#bg_2 {
-  background: linear-gradient(45deg, #ff2242, #e79736, #3755f8, #33abfa, #00af2e);
-}
-
-#bg_3 {
-  background: linear-gradient(-45deg, #3755f8 15%, #33abfa 100%);
-}
-
-.category1-items:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-box-shadow: 0rem 0rem 3rem black;
-          box-shadow: 0rem 0rem 3rem black;
-}
-
-#items_1_1:hover ~ #bg_1 {
-  opacity: 1;
-}
-
-#items_1_2:hover ~ #bg_2 {
-  opacity: 1;
-}
-
-#items_1_3:hover ~ #bg_3 {
-  opacity: 1;
-}
-
-.category2 {
-  position: relative;
-  min-height: 200vh;
-  background-color: #393e46;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.layer1 {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 30rem;
-  margin: 3rem 0;
-}
-
-.overlap-parent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-}
-
-.overlap-pics {
-  /* width: 0; */
-  position: relative;
-  height: 0;
-  width: 100%;
-  margin: 3rem;
-  z-index: 4;
-}
-
-.overlap-pics-indv {
-  position: absolute;
-  border-radius: 0.2rem 1rem;
-  -webkit-box-shadow: 0rem 0rem 1rem black;
-          box-shadow: 0rem 0rem 1rem black;
-  -webkit-transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-  transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-}
-
-.overlap-pics-indv:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  z-index: 2;
-}
-
-.overlap-pics:hover .overlap-pics-indv:not(:hover) {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-  opacity: 0.3;
-}
-
-#oppics_1 {
-  top: 5rem;
-  left: 25rem;
-}
-
-#oppics_2 {
-  top: -2rem;
-  left: 15rem;
-}
-
-#oppics_3 {
-  top: 7rem;
-  left: 10rem;
-}
-
-.pop-text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
 }
 
 html::-webkit-scrollbar {

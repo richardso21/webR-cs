@@ -50,6 +50,17 @@ function cursorfunction() {
       cursor.classList.remove("expand");
     }, 500);
   });
+
+  const link = document.querySelectorAll('a');
+
+  for (i=0; link.length; i++) {
+    link[i].addEventListener("mouseover", e => {
+      cursor.classList.add("valid");
+    });
+    link[i].addEventListener("mouseout", e => {
+      cursor.classList.remove("valid");
+    });
+  }
 }
 
 // function hoverfunction() {

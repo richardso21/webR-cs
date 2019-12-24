@@ -6,8 +6,7 @@
   color: white;
   background: linear-gradient(315deg, #0663f3, #ea1515);
   background-size: 400% 400%;
-
-  animation: gradientbg 8s ease infinite;
+  animation: gradientbg 8s ease infinite, hint 1s ease-in-out forwards 5.5s;
 }
 
 @keyframes gradientbg {
@@ -19,6 +18,15 @@
   }
   100% {
     background-position: 2% 0%;
+  }
+}
+
+@keyframes hint {
+  from {
+    height: 100vh;
+  }
+  to {
+    height: 95vh;
   }
 }
 
@@ -41,30 +49,3 @@
     box-shadow: inset 775px 0 0 0 $dark;
   }
 }
-
-// .button {
-//   display: inline-block;
-//   position: absolute;
-//   bottom: 20%;
-//   left: 50%;
-//   // transform: translate(-50%,-70%);
-// }
-
-// #intro-button {
-//   background-color: white;
-//   padding: 0 3rem;
-//   border: 0.1rem solid transparent;
-//   border-radius: 1rem 0.5rem;
-//   color: $darker;
-//   text-decoration: none;
-//   font-size: 2.5rem;
-//   font-style: italic;
-//   text-align: center;
-//   transition: 0.3s ease;
-//   box-shadow: inset 0 0 0 0 black;
-// }
-
-// #intro-button:hover {
-//   box-shadow: inset 0 60px 0 0 $darker;
-//   color: white;
-// }

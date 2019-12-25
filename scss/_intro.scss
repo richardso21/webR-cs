@@ -33,7 +33,7 @@
 
 #intro-content span {
   position: absolute;
-  bottom: 15%;
+  bottom: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
@@ -44,7 +44,7 @@
 
 @keyframes highlight {
   from {
-    box-shadow: inset 0 0 0 0.01px $dark;
+    box-shadow: inset 0 0 0 0.01px $darker;
   }
   to {
     box-shadow: inset 775px 0 0 0 $dark;

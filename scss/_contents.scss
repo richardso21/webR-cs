@@ -1,0 +1,27 @@
+.wrapper {
+  min-height: 200vh;
+  background: $darker;
+  box-shadow: 0 0 1rem $darker;
+}
+
+.media {
+  height: 75vh;
+}
+
+.media,
+.content-child {
+  box-shadow: 0 0 2rem black;
+}
+
+.content-parents {
+  padding: 8rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.content-child {
+  width: 50vh;
+  background-color: $dark;
+  text-align: center;
+}

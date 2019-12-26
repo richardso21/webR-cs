@@ -160,8 +160,8 @@ body {
   pointer-events: none;
   -webkit-transition: top 50ms ease-out, left 50ms ease-out, border 250ms ease, -webkit-transform 250ms ease;
   transition: top 50ms ease-out, left 50ms ease-out, border 250ms ease, -webkit-transform 250ms ease;
-  transition: top 50ms ease-out, left 50ms ease-out, transform 250ms ease, border 250ms ease;
-  transition: top 50ms ease-out, left 50ms ease-out, transform 250ms ease, border 250ms ease, -webkit-transform 250ms ease;
+  transition: top 50ms ease-out, left 50ms ease-out, transform 250ms ease, border 250ms ease;
+  transition: top 50ms ease-out, left 50ms ease-out, transform 250ms ease, border 250ms ease, -webkit-transform 250ms ease;
 }
 
 .cursor::after {
@@ -403,8 +403,8 @@ body {
   height: 200px;
   position: relative;
   left: 100%;
-  -webkit-transition: all 250ms ease-out;
-  transition: all 250ms ease-out;
+  -webkit-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
 }
 
 .wrapper {
@@ -412,6 +412,36 @@ body {
   background: #222831;
   -webkit-box-shadow: 0 0 1rem #222831;
           box-shadow: 0 0 1rem #222831;
+}
+
+.media {
+  height: 75vh;
+}
+
+.media,
+.content-child {
+  -webkit-box-shadow: 0 0 2rem black;
+          box-shadow: 0 0 2rem black;
+}
+
+.content-parents {
+  padding: 8rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.content-child {
+  width: 50vh;
+  background-color: #393e46;
+  text-align: center;
 }
 
 html::-webkit-scrollbar {

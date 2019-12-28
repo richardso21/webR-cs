@@ -161,8 +161,8 @@ body {
   pointer-events: none;
   -webkit-transition: top 50ms ease-out, left 50ms ease-out, border 250ms ease, -webkit-transform 250ms ease;
   transition: top 50ms ease-out, left 50ms ease-out, border 250ms ease, -webkit-transform 250ms ease;
-  transition: top 50ms ease-out, left 50ms ease-out, transform 250ms ease, border 250ms ease;
-  transition: top 50ms ease-out, left 50ms ease-out, transform 250ms ease, border 250ms ease, -webkit-transform 250ms ease;
+  transition: top 50ms ease-out, left 50ms ease-out, transform 250ms ease, border 250ms ease;
+  transition: top 50ms ease-out, left 50ms ease-out, transform 250ms ease, border 250ms ease, -webkit-transform 250ms ease;
 }
 
 .cursor::after {

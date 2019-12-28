@@ -1,8 +1,4 @@
-window.onload = function() {
-  cursorfunction();
-  // clickfunction();
-  // welcomefunction();
-};
+window.addEventListener("load", cursorfunction);
 
 function cursorfunction() {
   const cursor = document.querySelector(".cursor");

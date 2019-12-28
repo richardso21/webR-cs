@@ -6,5 +6,5 @@ window.addEventListener("scroll", function(e) {
 
   target.style.transform = "translate3d(" + rate + "px, 0px, 0px)";
 
-  const textTarget = document.querySelect;
+  // const textTarget = document.querySelect;
 });

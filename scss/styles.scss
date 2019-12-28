@@ -1,4 +1,5 @@
 @import "variables";
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
 
 @import "welcome";
 @import "cursor";
@@ -6,6 +7,7 @@
 @import "nav";
 @import "slider";
 @import "contents";
+@import "footer";
 
 html::-webkit-scrollbar {
   width: 0.5rem;

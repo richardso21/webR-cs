@@ -1,7 +1,8 @@
 //dynamic nav bar
-window.onscroll = function() {
-  scrollFunction();
-};
+// window.onscroll = function() {
+//   scrollFunction();
+// };
+window.addEventListener("scroll", scrollFunction);
 
 function scrollFunction() {
   if (
@@ -23,14 +24,6 @@ function scrollFunction() {
       .forEach(el => el.classList.remove("transform-a"));
   }
 }
-
-// function hoverfunction() {
-//   const cursor = document.querySelector(".cursor");
-// }
-
-// function clickfunction() {
-//   const cursor = document.querySelector(".cursor");
-// }
 
 // // welcome-intro
 // function welcomefunction() {

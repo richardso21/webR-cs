@@ -6,8 +6,8 @@ window.addEventListener("scroll", scrollFunction);
 
 function scrollFunction() {
   if (
-    document.body.scrollTop > 300 ||
-    document.documentElement.scrollTop > 300
+    document.body.scrollTop > window.innerHeight / 2 ||
+    document.documentElement.scrollTop > window.innerHeight / 2
   ) {
     let NavElement = document.querySelector("#nav-items");
     NavElement.classList.add("transform-nav");

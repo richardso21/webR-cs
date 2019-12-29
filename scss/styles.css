@@ -7,8 +7,8 @@
   height: 100%;
   width: 100%;
   background-color: #222831;
-  -webkit-animation: fade-into 1s ease forwards 2.5s;
-          animation: fade-into 1s ease forwards 2.5s;
+  -webkit-animation: fade-into 1s ease forwards 2.25s;
+          animation: fade-into 1s ease forwards 2.25s;
 }
 
 @-webkit-keyframes fade-into {
@@ -34,8 +34,8 @@
 }
 
 body {
-  -webkit-animation: stop-scroll 2.5s step-end forwards;
-          animation: stop-scroll 2.5s step-end forwards;
+  -webkit-animation: stop-scroll 2.25s step-end forwards;
+          animation: stop-scroll 2.25s step-end forwards;
 }
 
 @-webkit-keyframes stop-scroll {
@@ -65,8 +65,8 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1.5);
           transform: translate(-50%, -50%) scale(1.5);
-  -webkit-animation: fill-in 0.5s ease forwards 2s;
-          animation: fill-in 0.5s ease forwards 2s;
+  -webkit-animation: fill-in 0.5s ease forwards 1.75s;
+          animation: fill-in 0.5s ease forwards 1.75s;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   -webkit-box-shadow: inset 0 0 0 0 #222831;
@@ -161,8 +161,8 @@ body {
   pointer-events: none;
   -webkit-transition: top 50ms ease-out, left 50ms ease-out, border 250ms ease, -webkit-transform 250ms ease;
   transition: top 50ms ease-out, left 50ms ease-out, border 250ms ease, -webkit-transform 250ms ease;
-  transition: top 50ms ease-out, left 50ms ease-out, transform 250ms ease, border 250ms ease;
-  transition: top 50ms ease-out, left 50ms ease-out, transform 250ms ease, border 250ms ease, -webkit-transform 250ms ease;
+  transition: top 50ms ease-out, left 50ms ease-out, transform 250ms ease, border 250ms ease;
+  transition: top 50ms ease-out, left 50ms ease-out, transform 250ms ease, border 250ms ease, -webkit-transform 250ms ease;
 }
 
 .cursor::after {
@@ -228,8 +228,8 @@ body {
   color: white;
   background: linear-gradient(315deg, #0663f3, #ea1515);
   background-size: 400% 400%;
-  -webkit-animation: gradientbg 8s ease infinite, hint 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards 4.25s;
-          animation: gradientbg 8s ease infinite, hint 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards 4.25s;
+  -webkit-animation: gradientbg 8s ease infinite, hint 1s cubic-bezier(0.645, 0.045, 0.355, 1) forwards 3.35s;
+          animation: gradientbg 8s ease infinite, hint 1s cubic-bezier(0.645, 0.045, 0.355, 1) forwards 3.35s;
 }
 
 @-webkit-keyframes gradientbg {
@@ -283,8 +283,8 @@ body {
   white-space: nowrap;
   font-style: italic;
   font-size: 3rem;
-  -webkit-animation: highlight 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86) forwards 3.25s;
-          animation: highlight 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86) forwards 3.25s;
+  -webkit-animation: highlight 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86) forwards 2.5s;
+          animation: highlight 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86) forwards 2.5s;
 }
 
 @-webkit-keyframes highlight {
@@ -310,10 +310,10 @@ body {
 }
 
 .navbar {
-  margin: 0rem 0.5rem;
+  margin: 0rem 0.75rem;
   position: -webkit-sticky;
   position: sticky;
-  top: 0.5rem;
+  top: 0.75rem;
   height: 0;
   z-index: 100;
 }
@@ -502,6 +502,7 @@ body {
 
 .footer video {
   z-index: -1;
+  width: 100%;
 }
 
 .footer-contents {

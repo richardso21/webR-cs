@@ -7,7 +7,7 @@
   background: linear-gradient(315deg, #0663f3, #ea1515);
   background-size: 400% 400%;
   animation: gradientbg 8s ease infinite,
-    hint 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards 4.25s;
+    hint 1s cubic-bezier(0.645, 0.045, 0.355, 1) forwards 3.35s;
 }
 
 @keyframes gradientbg {
@@ -39,7 +39,7 @@
   white-space: nowrap;
   font-style: italic;
   font-size: 3rem;
-  animation: highlight 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86) forwards 3.25s;
+  animation: highlight 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86) forwards 2.5s;
 }
 
 @keyframes highlight {

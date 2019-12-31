@@ -442,8 +442,8 @@ body {
 }
 
 .fade-in-element {
-  -webkit-animation: fade-in-element 2s;
-          animation: fade-in-element 2s;
+  -webkit-animation: fade-in-element 1.5s;
+          animation: fade-in-element 1.5s;
 }
 
 @-webkit-keyframes fade-in-element {

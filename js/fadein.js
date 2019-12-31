@@ -14,12 +14,14 @@ function checkPos() {
     if (positionFromTop - windowHeight <= 0) {
       element.classList.add("fade-in-element");
       element.classList.remove("hidden-scroll");
+    } else {
+      element.classList.remove("fade-in-element");
+      element.classList.add("hidden-scroll");
     }
   }
 }
-
-window.addEventListener("scroll", checkPos);
 window.addEventListener("resize", init);
+window.addEventListener("scroll", checkPos);
 
 init();
 checkPos();

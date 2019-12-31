@@ -397,7 +397,7 @@ body {
 
 .slider {
   overflow: hidden;
-  padding: 8rem 0rem;
+  padding: 8rem 0 0 0;
 }
 
 #slider-content {

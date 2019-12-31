@@ -1,0 +1,45 @@
+@import "variables";
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+
+@import "welcome";
+@import "cursor";
+@import "intro";
+@import "nav";
+@import "slider";
+@import "contents";
+@import "footer";
+
+html::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: $darker;
+  transition: 0.3s ease-out;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: $dark;
+}
+
+body {
+  margin: 0;
+  border: 0;
+  font-family: "Source Sans Pro", sans-serif;
+
+  // animation: fadeIn ease 2s;
+  // animation-iteration-count: 1;
+  // animation-fill-mode: forwards;
+}
+
+// @keyframes fadeIn {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+
+html {
+  scroll-behavior: smooth;
+  // overflow-y: scroll;
+  // cursor: url();
+}

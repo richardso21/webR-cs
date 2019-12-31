@@ -1,0 +1,11 @@
+.slider {
+  overflow: hidden;
+  padding: 8rem 0rem;
+}
+
+#slider-content {
+  height: 200px;
+  position: relative;
+  left: 100%;
+  transition: all 500ms ease-out;
+}

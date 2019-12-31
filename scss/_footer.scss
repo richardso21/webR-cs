@@ -1,0 +1,43 @@
+.spacer {
+  height: 15rem;
+}
+
+.footer {
+  width: 100%;
+  position: fixed;
+  height: 15rem;
+  overflow: hidden;
+  bottom: 0;
+  z-index: -1;
+}
+
+.footer video {
+  z-index: -1;
+  width: 100%;
+}
+
+.footer-contents {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  top: 35%;
+  flex-direction: row;
+  color: white;
+  text-align: center;
+  font-weight: 800;
+  font-size: 72px;
+}
+
+#footer1 {
+  flex: 5;
+  background: linear-gradient(135deg, #ff2242 15%, #e79736 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#footer2 {
+  flex: 6;
+  background: linear-gradient(-45deg, #3755f8 15%, #33abfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
